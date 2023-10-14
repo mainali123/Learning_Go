@@ -7,8 +7,8 @@ import (
 )
 
 // GetFloats reads a float64 from each line of the file.
-func GetFloats(fileName string) ([3]float64, error) { // The function will return an array of numbers and any error encountered
-	var numbers [3]float64         // Declare the array we'll be returning
+func GetFloats(fileName string) ([]float64, error) { // The function will return an array of numbers and any error encountered
+	numbers := []float64{}         // Declare the array we'll be returning
 	file, err := os.Open(fileName) // Open the provided filename
 	if err != nil {                // If there was an error opening the file, return it
 		return numbers, err
